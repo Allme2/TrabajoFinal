@@ -1,0 +1,44 @@
+{{!-- document.getElementById('nav1').style.display = 'block' --}}
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-4">
+            <a href="/admin/alta"><i style="font-size:2em; cursor:pointer" class="fas fa-plus text-primary" data-toggle="tooltip" data-placement="top" title="Agregar una noticia"></i></a>
+        </div>
+        <div class="col-12 mt-4">
+            <table class="table text-center">
+                <thead>
+                    
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Fecha</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </thead>
+
+                <tbody>
+                    {{#each discos_array}}
+                    <tr>
+                        <td>{{id_d}}</td>
+                        <td>{{titulo}}</td>
+                        <td>{{nombre}} {{apellido}}</td>
+                        <td>{{fecha}}</td>
+                        <td>
+                            <a href="/admin/editar/{{id_d}}">
+                            <i class="fas fa-pencil-alt text-primary"></i>
+                            </a>
+                            </td>
+                  
+                        <td>
+                            <a href="/admin/eliminar/{{id_d}}">
+                                <i class="fas fa-times text-danger"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

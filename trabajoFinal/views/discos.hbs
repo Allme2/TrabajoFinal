@@ -1,0 +1,56 @@
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/discos/all">
+            <img src="/images/logo.jpg" alt="TAN logo" style="width: 6%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/registro">registro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacto">contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--HEADER-->
+      <header class="main-header">
+          <div class="background-overlay text-white py-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Todo aparenta normal</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deserunt error quas aperiam! Consequuntur maiores sit officiis repellat corporis provident iste tenetur. Voluptatibus nostrum dolores in? Quia a nobis nisi?.</p>
+                       
+                    </div>
+                
+                </div>
+            </div>
+          </div>
+      </header>
+
+<div class="container-fluid ">
+    <div class="row mt-3">
+        {{#each discos_array}}
+        <div class="col-4 mb-4">
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/{{imagen}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{titulo}}</h5>
+                <p class="card-text text-info mt-2">{{texto}} </p>
+                <p> fecha : {{fecha}}</p>
+                <a href="/discos/{{id_d}}" class="btn btn-primary btn-block">Ver más</a>
+            </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

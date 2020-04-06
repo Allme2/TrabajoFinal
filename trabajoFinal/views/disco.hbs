@@ -1,0 +1,63 @@
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/discos/all">
+            <img src="/images/logo.jpg" alt="TAN logo" style="width: 6%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/registro">registro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacto">contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+<div class="container  " >
+    {{#each disco_array}}
+    <div class="row bg-dark">
+        <div class="col-lg-4 col-md-4 col-12 mr-2">
+            <img src="/images/{{imagen}}" style="width:100%; height : auto;">
+        </div>
+        <div class="col-lg-6 col-md-2 col-12 ">
+            <h4 class="text-danger">{{titulo}}</h4>
+            <p class="text-danger">{{texto}}</p>
+            <p class="text-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus obcaecati eligendi explicabo quibusdam adipisci quae nemo ad, aliquam provident. Natus, mollitia! At ducimus corporis voluptatum cumque. Sunt temporibus veritatis eius.</p>
+            <small class="text-primary">{{fecha_creacion}}</small>
+        </div>
+    </div>
+    {{/each}}
+    <div class="row ">
+        <div class="col-6 bg-dark">
+            {{#if loggedIn}}
+            <form method="post" action="/discos/comentario">
+
+                <input type="hidden" name="id_d" value="{{id_d}}" >
+
+                <label for="comentario" style="color: white;">Comenta</label>
+                <textarea class="form-control" name="comentario" placeholder="Cuentanos que te parecio"></textarea>
+
+                <button type="submit" class="btn btn-primary mt-3 ">Comentar</button>
+            </form>
+            {{else}}
+            <a href="/login">Inicia sesiòn para comentar</a>
+            {{/if}}
+        </div>
+                <div class="col-6 bg-dark">
+            <h4 class="text-center" style="color: white">Comentarios</h4>
+           {{#each array_comentarios}}
+            <h6 style="color: white">{{comentario}}</h6>
+            <small class="text-primary">{{fecha}}</small>
+            <hr>
+           {{/each}}
+        </div>
+    </div>

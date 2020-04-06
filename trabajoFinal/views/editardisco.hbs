@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            
+            <form action="/admin/editar" method="post">
+            {
+            {{#each disco_array}}
+            <input type="hidden" value="{{id_n}}" name="id_n">
+            <small class="text-primary">Escrita el : {{fecha_creacion}}</small>
+
+                <div class="form-group">
+                    <label for="titulo">Titulo del disco</label>
+                    <input type="text" class="form-control" 
+                    value="{{titulo}}" name="titulo" id="titulo">
+
+                </div>
+
+                <div class="form-group">
+                    <label class="text-info">Autor : {{nombre}} {{apellido}}</label>
+               
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control"  name="texto">{{texto}}</textarea>
+                </div>
+        
+            {{/each}}
+                <button type="submit" class="btn btn-primary btn-block">Editar</button>
+            </form>
+        </div>
+    </div>
+</div>

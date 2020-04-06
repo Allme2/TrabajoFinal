@@ -1,0 +1,114 @@
+       <!--NAVIGATION-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/discos/all">
+            <img src="/images/logo.jpg" alt="TAN logo" style="width: 6%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/registro">registro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacto">contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+{{!--    
+   <section class="contact-box">
+       <div class="row no-gutters bg-dark register-bg align-items-center justify-content-center">
+          
+           <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center">
+
+                    <form action="/registro" method="post">
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">apellido <span class="text-danger">*</span></label>
+                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Tu apellido">
+                            </div>
+                           
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Correo electrónico <span class="text-danger">*</span></label>
+                            <input type="email" name="mail" class="form-control" placeholder="Ingresa tu correo electrónico">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label>
+                            <input type="password" id="password" name="password"  class="form-control" placeholder="Ingresa una contraseña">
+                        </div>
+                        <div class="form-group mb-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y aprovame por favor</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block width-100">Regístrate</button>
+
+                        {{#if status}}
+                        <h5 class="text-center text-success mt-3">{{message}}</h5>
+                        {{else}}
+                        <h5 class="text-center text-danger mt-3">{{message}}</h5>
+                        {{/if}}
+                    </form>
+                  
+                </div>
+           </div>
+       </div>
+   </section> --}}
+
+   <header class="main-header2">
+          <div class="background-overlay text-white py-5">
+              <div class="container align-items-center justify-content-center">
+                  <div class="row mt-4 justify-content-center">
+                    <div class="col-6">
+                    <form action="/registro" method="post">
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                                <input autofocus type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">apellido <span class="text-danger">*</span></label>
+                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Tu apellido">
+                            </div>
+                           
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Correo electrónico <span class="text-danger">*</span></label>
+                            <input type="email" name="mail" class="form-control" placeholder="Ingresa tu correo electrónico">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label>
+                            <input type="password" id="password" name="password"  class="form-control" placeholder="Ingresa una contraseña">
+                        </div>
+                        <div class="form-group mb-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y aprobame por favor</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block width-100">Regístrate</button>
+
+                        {{#if status}}
+                        <h5 class="text-center text-success mt-3">{{message}}</h5>
+                        {{else}}
+                        <h5 class="text-center text-danger mt-3">{{message}}</h5>
+                        {{/if}}
+                    </form>
+                  
+                    </div>
+                </div>
+          </div>
+      </header>
+      <h2>{{message}}</h2>

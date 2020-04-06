@@ -1,0 +1,9 @@
+Es una pagina de una banda argentina de rock en la cual se mostraran sus discos.
+
+En esta pagina la persona se podra:
+registrar
+loguear en el caso de que ya este registrada
+enviar un mail de contacto
+ver todos los discos, ver uno en particular y comentarlos.
+
+de manera adicional quise copiar la idea del admin vista en clase para practicarla, la vista de la misma esta copiada a la realizada en dicha clase.
